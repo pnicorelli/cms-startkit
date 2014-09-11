@@ -27,8 +27,9 @@ class MySql extends mysqli{
 	public function query($sql){
 		$this->last_query = $sql;
 		//DEBUG QUERY
-		//echo "-- ".$sql." --<br>";
-		//file_put_contents('php://stderr', $sql."\n");
+		if( DEBUG_QUERY === true ){
+			file_put_contents('php://stderr', $sql."\n");
+		}
 		$this->query_result = parent::query($sql);
 		
 		if(strtoupper(substr($sql, 0, 6)) == 'SELECT'){

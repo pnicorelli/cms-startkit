@@ -1,8 +1,7 @@
 <?php
 require_once("../init.php");
 
-$user = new UserAdminister();
-$user->destroy_session();
+$auth->logout();
 
 header("Location: index.php?logout=si");
 exit();

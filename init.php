@@ -19,5 +19,5 @@ function __autoload($class_name) {
 eval("class DB extends ". DB_TYPE . " { }");
 
 $ww = new MainController($_SERVER["PHP_SELF"]);
-
+$auth = new Auth();
 ?>

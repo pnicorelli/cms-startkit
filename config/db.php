@@ -4,9 +4,9 @@
 define("DB_TYPE", "MySql");
 
 define("DB_HOST","localhost");
-define("DB_LOGIN","tuttodunfiato");
-define("DB_PASSW","tutt0dunfi@t0");
-define("DB_SCHEMA","tuttodunfiato");
+define("DB_LOGIN","ww_user");
+define("DB_PASSW","ww_user");
+define("DB_SCHEMA","cassiopea");
 
-
+define("DEBUG_QUERY", true);
 ?>

@@ -10,14 +10,6 @@ myMenu=[
 	[null,'Banner','banner_elenco.php',null,null],
 	
 		
-	[null,'Clinica Caf&egrave;','video_elenco.php',null,null],
-
-	[null,'La Grande Regata','','','',
-		[null,'Lista Utenti','utenti_elenco.php'],
-		[null,'Elenco Regate','regata_elenco.php'],
-		[null,'Domande Malattie','regatadomande_elenco.php'],
-	],		
-		
 	[null,'Logout','logout.php',null,null] 
 ]; 
 

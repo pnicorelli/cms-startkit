@@ -61,26 +61,21 @@ CREATE TABLE IF NOT EXISTS `gestione_tabelle` (
   PRIMARY KEY (`idGT`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
 
--- --------------------------------------------------------
+
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nickname` varchar(64) COLLATE utf8_bin NOT NULL,
+  `username` varchar(64) COLLATE utf8_bin NOT NULL,
+  `password` varchar(64) COLLATE utf8_bin NOT NULL,
+  `group` varchar(64) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
 
 --
--- Struttura della tabella `utenti_admin`
+-- Dumping data for table `users`
 --
 
-CREATE TABLE IF NOT EXISTS `utenti_admin` (
-  `ut_id` int(11) NOT NULL AUTO_INCREMENT,
-  `ut_username` varchar(50) NOT NULL,
-  `ut_password` varchar(50) NOT NULL,
-  PRIMARY KEY (`ut_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+INSERT INTO `users` (`id`, `nickname`, `username`, `password`, `group`) VALUES
+(1, 'administrator', 'admin', 'de145552133225e8148e3be3b73e2fd2', 'admins');
 
---
--- Dump dei dati per la tabella `utenti_admin`
---
-
-INSERT INTO `utenti_admin` (`ut_id`, `ut_username`, `ut_password`) VALUES
-(1, 'admin', '94fbfd1565b5603193c4f4132b2762b7');
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

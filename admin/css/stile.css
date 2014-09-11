@@ -1,7 +1,7 @@
 /* CSS Document */
 
 .select {
-	font-family:Arial, Helvetica, sans-serif;
+	
 	font-size:12px;
 	color:#333333;
 }
@@ -30,8 +30,8 @@
 /* ==================================  fine classi nuove ===================================*/
 body {
 	background-color:#F0F0F0;
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:12px;
+	font-family: Verdana !important;
+	font-size:14px;
 	color:#333333;
 }
 
@@ -41,13 +41,13 @@ div a {
 }
 
 .testo {
-	font-family:Arial, Helvetica, sans-serif;
+	
 	font-size:12px;
 	color:#333333;
 }
 
 .testo_bold {
-	font-family:Arial, Helvetica, sans-serif;
+	
 	font-size:12px;
 	color:#1E1E1E;
 	font-weight:bold;
@@ -55,7 +55,7 @@ div a {
 
 #contenitore_esterno  {
 	background-color:#FFFFFF;
-	width: 820px;
+	width: 1024px;
 	padding-top:10px;
 	padding-bottom:10px;
 	margin: 0px auto 0px auto;
@@ -63,7 +63,7 @@ div a {
 
 #contenitore {
 	background-color:#FFFFFF;
-	width: 800px;
+	width: 1000px;
 	margin: 0px auto 0px auto;
 	border: 2px solid #B9BEC1;
 }
@@ -75,21 +75,20 @@ div a {
 
 
 #content {
-	background-color:#FFFFFF;
+
 	padding:15px 0px 0px 10px;
-	float:right;
-	width:790px;
+
 	min-height:400px;
 }
 
 .input {
-	font-family:Arial, Helvetica, sans-serif;
+	
 	font-size:11px;
 	color:#333333;
 }
 
 .button {
-	font-family:Arial, Helvetica, sans-serif;
+	
 	font-size:11px;
 	font-weight:bold;
 	color:#333333;
@@ -115,7 +114,7 @@ div a {
 }
 
 .box {
-	font-family:Arial, Helvetica, sans-serif;
+	
 	font-size:11px;
 	font-weight:normal;
 	color:#333333;
@@ -124,7 +123,7 @@ div a {
 }
 
 .box_glossario {
-	font-family:Arial, Helvetica, sans-serif;
+	
 	font-size:11px;
 	font-weight:normal;
 	color:#333333;
@@ -219,7 +218,7 @@ div a {
 .sfondoSett {
 	text-align:center;
 	background-color:#F7F7F7;
-	font-family:Arial, Helvetica, sans-serif;
+	
 	font-size:12px;
 }
 
@@ -272,21 +271,21 @@ margin:10px 0px 0px 0px;
 
 
 .sottotitolo_box{
-font-family:Arial, Helvetica, sans-serif;
+
 border:1px solid #7F9DB9;
 font-size:11px;
 width:400px;
 height:80px;
 }
 .testo_box{
-font-family:Arial, Helvetica, sans-serif;
+
 border:1px solid #7F9DB9;
 font-size:11px;
 width:400px;
 height:150px;
 }
 .testo_box_little{
-font-family:Arial, Helvetica, sans-serif;
+
 border:1px solid #7F9DB9;
 font-size:11px;
 width:400px;

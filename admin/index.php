@@ -1,4 +1,9 @@
-<?php require_once("../init.php"); ?>
+<?php
+
+require_once("initback.php");
+
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -35,7 +40,7 @@ function controlla()
 </td></tr>
 <tr>
   <td align="center" height="300">
-  <h2><img src="../img/logo.png" /></h2>
+  <h2><img src="img/admin-min-icon.png" /></h2>
   
   <?php
   if(isset($_GET["errore"]) and $_GET["errore"] == "login") 
@@ -48,7 +53,17 @@ function controlla()
   	  echo "<span id='titoletto_login'>Logout effettuato correttamente</span><br><br>";
   }
   ?>
-  
+ 
+ 
+ <?php
+ 
+if( $auth->isAuth() ){
+		?>
+<button onclick="location.href='accesso.php'">HOME</button><br>
+<button onclick="location.href='logout.php'">LOGOUT</button>
+		<?php
+} else {
+		?>
  <form name="form" method="post" action="controlla_login.php">
   <table width="35%" border="0" cellspacing="2" cellpadding="2" >
     <tr>
@@ -60,10 +75,13 @@ function controlla()
       <td><input type="password" name="password" class="input" /></td>
     </tr>
     <tr>
-      <td colspan="2" align="center" height="50"><input type="button" name="Submit" value="Login" class="button" onclick="controlla();" /></td>
+      <td colspan="2" align="center" height="50"><input type="submit" name="Submit" value="Login" class="button" onclick="controlla();" /></td>
       </tr>
   </table>
   </form>
+		<?php
+}
+?>
   </td>
 </tr>
 </table>

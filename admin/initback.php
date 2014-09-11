@@ -1,12 +1,10 @@
 <?php
 error_reporting(E_ALL);
 
-require_once("../init_noauth.php");
+require_once("../init.php");
 
 
-if(!isset($_SESSION["admin".NOME_SESSIONE]) or $_SESSION["admin".NOME_SESSIONE] == "")
-{
-	header("Location: index.php");
-	exit();
+if( $ww->page != "index.php" && $auth->isAuth() === false){
+		header("location: index.php");
 }
 ?>
