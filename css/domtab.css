@@ -1,0 +1,58 @@
+		div.domtab{
+			width:569px;
+			float:left;
+			margin-top:20px;
+		}
+		ul.domtabs{
+			margin: 0;padding:0;
+			float:left;
+			width:100%;
+			list-style:none;	
+			border:none;		
+		}
+		ul.domtabs li{
+			margin: 0;padding:0;
+			float:left;
+		}
+		ul.domtabs a:link,
+		ul.domtabs a:visited,
+		ul.domtabs a:active,
+		ul.domtabs a:hover{
+			padding-top:10px;
+			display:block;
+			color:#fff;
+			width:118px;
+			text-decoration:none;
+			font-family:Arial, Helvetica, sans-serif;
+			font-size:14px;
+			background:#5d2715;
+			text-align:center;
+		}
+		html>body ul.domtabs a:link,
+		html>body ul.domtabs a:visited,
+		html>body ul.domtabs a:active,
+		html>body ul.domtabs a:hover{
+			height:auto;
+			min-height:30px;
+		}
+		ul.domtabs a:hover{
+			background:#5d2715;
+			color:#fff;
+		}
+		div.domtab div{
+			clear:both;
+			width:auto;
+			float:left;
+			width:529px;
+			padding:20px;
+			background-color:#cf6001;
+		}
+
+		ul.domtabs li.active a:link,
+		ul.domtabs li.active a:visited,
+		ul.domtabs li.active a:active,
+		ul.domtabs li.active a:hover{
+			background:none;
+			color:#fff;
+			background-color:#cf6001;
+		}

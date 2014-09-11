@@ -1,0 +1,254 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'univers_light_condensedRg';
+    src: url('fi_1a-webfont.eot');
+    src: url('fi_1a-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fi_1a-webfont.woff') format('woff'),
+         url('fi_1a-webfont.ttf') format('truetype'),
+         url('fi_1a-webfont.svg#univers_light_condensedRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {margin: 0;padding: 0;border: 0;font-family: Arial, Helvetica, sans-serif;background:  url(../img/bk_site.jpg) repeat-x;}
+
+header {margin: 0 auto;padding: 0;width: 1020px;height: 140px;background:  url(../img/top.png) no-repeat;}
+	#esci {margin: 0;padding: 0;float: right;position: relative;right: 80px;top: 5px;}
+		#esci a {margin: 0;padding: 0;text-align: right;color: #fff;font-size: 14px;text-decoration: none;}
+	#logo_tuttodunfiato {margin: 0;padding: 0;float: left;position: relative;left: 50px;top: 50px;}
+	#logo_msd {margin: 0;padding: 0;float: right;position: relative;right: 50px;top: 60px;}
+
+/* INTRO */		
+#bk_intro {margin: 0 auto;margin-top: 70px;padding: 0;height: 512px;background:  url(../img/bk_intro.jpg) repeat-x center center;}
+	#intro {margin: 0 auto;padding: 0;width: 1020px;height: 512px;}
+	#login {margin: 0;padding: 10px 0 0 50px;float: left;width: 290px;height: 492px;}
+		#login p {margin: 0;padding: 0;text-align: left;color: #fff;font-size: 11px;}
+		#login a {margin: 0;padding: 0;text-align: left;color: #fff;font-size: 24px;font-family: 'univers_light_condensedRg';text-decoration: none;}
+		#box_login_title {margin: 0;padding: 0;width: 100px;position: relative;top: -18px;left: 90px;background:  url(../img/box_login_title.png) no-repeat;z-index: 10;text-align: center;color: #fff;font-size: 24px;font-family: 'univers_light_condensedRg';}
+		#box_login {margin-top: 30px;margin-bottom: 10px;padding: 0;width: 290px;height: 226px;border: 1px solid #fff;border-radius: 10px;-moz-border-radius: 10px; /* firefox */-webkit-border-radius: 10px; /* safari, chrome */z-index: 1;}
+		form#login {margin: 0;padding-left: 15px;font-size: 14px;color: #fff;width: 275px;height: 120px;}
+			form#login input {margin-top: 0;margin-bottom: 7px;padding: 3px;font-size: 14px;color: #fff;height: 25px;width: 92%;border: 1px solid #fff; background-color: transparent;}
+			form#login button{margin-right: 15px;padding: 5px;border: 0;width: 96px;height: 29px;font-size: 16px;color: #fff;text-decoration: none;cursor: pointer;text-align: left;background:  url(../img/ic_accedi.jpg) no-repeat right #009fe3;float: right;}
+		#box_login a {margin-top: 30px; margin-right: 15px;padding: 0;text-align: right;color: #fff;font-size: 12px;font-family: Arial, Helvetica, sans-serif;text-decoration: underline;float:right;}
+		#login p.numeroverde {margin-top: 10px;padding: 0;text-align: left;color: #fff;font-size: 14px;font-weight: bold;}
+/* END INTRO */	
+	
+#nav {margin: 0 auto;margin-bottom: 30px;padding: 0;width: 926px;height: 38px;background:  url(../img/bk_menu.png) no-repeat;}
+	#nav li {margin: 0;padding: 2px 0 0 2px;border: 0;float: left;display: block;position: relative;z-index: 1500;font-size: 24px;font-family: 'univers_light_condensedRg';text-decoration: none;font-weight: bold;color: #009fe3;cursor: pointer;}
+	#nav li a {margin: 0;padding: 0;border: 0;display: block;height: 24px;text-decoration: none;color: #009fe3;}
+	#nav li a:hover {margin: 0;padding: 0;border: 0;color: #009fe3;text-decoration:none;}
+	#nav ul {margin: 0;padding: 0;border: 0;position: absolute;left: 0;display: none;list-style: none;background: url(../img/bk_menu_prodotti.png) no-repeat;width: 332px;height: 119px;}
+	#nav ul li {margin: 0;padding: 0 0 0 15px;border: 0;float: left;width: 300px;height: 37px;}
+	#nav ul a {margin: 0;padding: 0;border: 0;display: block;}
+	/* fix ie6, meglio inserirlo in un file .css separato */
+	*html #nav ul {margin:0 0 0 -2px;}
+	
+#container {margin: 0 auto;padding: 0;width: 926px;}
+	#img_home {margin-right: 12px;padding: 0;width: 609px;height: 215px;float: left;}
+	#box_ricerca_title {margin: 0;padding: 0;width: 198px;position: relative;top: -18px;left: 50px;background:  url(../img/box_ricerca_title.png) no-repeat;z-index: 10;text-align: center;color: #008887;font-size: 24px;font-family: 'univers_light_condensedRg';}
+	#box_ricerca {margin-top: 13px;padding: 0;width: 303px;height: 200px;border: 1px solid #7fcff1;border-radius: 10px;-moz-border-radius: 10px; /* firefox */-webkit-border-radius: 10px; /* safari, chrome */float: left;}
+	form#ricerca {margin: 0;padding-left: 15px;font-size: 14px;color: #4c565c;width: 270px;height: 200px;}
+			form#ricerca input {margin-bottom: 10px;padding: 3px;font-size: 14px;color: #c2c2c2;height: 19px;width: 180px;border: 1px solid #c2c2c2; background-color: transparent;}
+			form#ricerca select {margin-bottom: 20px;padding: 3px;font-size: 14px;color: #c2c2c2;height: 27px;width: 188px;border: 1px solid #c2c2c2;background-color: transparent; -webkit-appearance:none; appearance:none; cursor:pointer; background-image: url(../img/freccia_select.png); vertical-align:middle; background-position:right; background-repeat:no-repeat; float:left;}
+			form#ricerca option {margin: 0;padding: 0;font-size: 14px;color: #c2c2c2;border: 0;width:180px;}
+			form#ricerca button{margin: 20px 0 5px 0;padding: 5px;border: 0;width: 150px;height: 29px;font-size: 16px;color: #fff;text-decoration: none;cursor: pointer;text-align: left;background:  url(../img/ic_ricerca.jpg) no-repeat right #009fe3;float: right;}
+		#box_ricerca a {margin: 0;padding: 0;text-align: right;color: #008887;font-size: 12px;font-family: Arial, Helvetica, sans-serif;text-decoration: underline;float:right;clear:both;}
+		#box_clinicacafe {margin: 20px 12px 40px 0;padding: 15px;border-top: 10px solid #5e2816;background: #ed6f03;width: 270px;height: 458px;float: left;}
+			#box_clinicacafe h2 {margin: 0;padding: 0;color: #5e2816;text-align: left;font-size: 18px;font-family: 'univers_light_condensedRg';text-transform: uppercase;}
+			#box_clinicacafe .a_title {margin: 0;padding: 0;color: #5e2816;text-align: left;font-size: 18px;font-family: 'univers_light_condensedRg';text-transform: uppercase;text-decoration: none !important; font-weight:bold;}
+			#box_clinicacafe h3 {margin-top: 20px;padding: 10px 0 10px 0;border-top: 1px solid #fff;border-bottom: 1px solid #fff;color: #5e2816;text-align: center;font-size: 16px;font-weight: normal;}
+			#box_clinicacafe p {margin-top: 10px;padding: 0;color: #5e2816;text-align: left;font-size: 12px;}
+			#box_clinicacafe a {margin: 0;padding: 0;color: #fff;text-decoration: underline;font-size:12px;}
+			#box_flashnews {margin-top: 20px;padding: 15px;border-top: 10px solid #008887;background: #d9eded;width: 270px;height: 458px;float: left;}
+			#box_flashnews h2 {margin-bottom: 20px;padding: 0;color: #008887;text-align: left;font-size: 30px;font-family: 'univers_light_condensedRg';text-transform: uppercase;}
+			#box_flashnews p {margin-top: 10px;padding: 0;color: #4c565c;text-align: left;font-size: 12px;}
+			#box_flashnews a {margin: 0;padding: 0;color: #008887;text-decoration: underline;font-size:12px;}
+		#box_lagranderegata {margin: 20px 0 40px 12px;padding: 15px;border-top: 10px solid #3abfef;background: #004175;width: 270px;height: 458px;float: left;}
+			#box_lagranderegata .a_azzurro {margin-left: 15px;padding: 0;color: #3abfef;text-align: left;font-size: 18px;font-family: 'univers_light_condensedRg';text-transform: uppercase;font-weight: bold;text-decoration: none;}
+			#box_lagranderegata h3 {margin-top: 20px;padding: 10px 0 10px 0;border-top: 1px solid #fff;border-bottom: 1px solid #fff;color: #3abfef;text-align: center;font-size: 16px;font-weight: normal;}
+			#box_lagranderegata .a_bianco {margin-left: 30px;padding: 0;color: #fff;text-align: left;font-size: 12px;text-decoration: underline;}
+
+	#box_contatti {margin-top: 13px;padding-bottom: 5px;border-bottom: 1px solid #9ea0a0;width: 303px;float: left;}
+		#box_contatti p {margin-left: 110px;padding: 0;color: #9ea0a0;text-align: left;font-size: 12px;}
+		#box_contatti a {margin: 0;padding: 0;color: #9ea0a0;text-decoration: underline;}
+
+footer {margin: 0 auto;padding: 0;height: 115px;background:  url(../img/bk_footer.jpg) repeat-x;clear: both;background-color: #4c565c;}
+	#menu_footer {margin: 0 auto;padding-top: 5px;width: 305px;color: #fff;font-size: 14px;}
+			#menu_footer a {margin: 0;padding: 0 10px 0 10px;text-align: left;color: #fff;font-size: 14px;text-decoration: none;}
+	#footer {margin: 0 auto;padding: 0;width: 1020px;height: 115px;background:  url(../img/top.png) no-repeat;}
+		#footer p {margin: 0;padding-top: 20px;text-align: left;color: #ccc;font-size: 11px;}
+
+	#box_banner {margin-top: 20px;padding: 0;width: 300px;height: 500px;float: left;}
+	
+/* RICERCA AVANZATA */
+	#page_ricercaavanzata_title {margin: 0;padding: 0;width: 160px;position: relative;top: -38px;left: 0;background:  url(../img/box_ricerca_title.png) no-repeat;z-index: 10;text-align: center;color: #008887;font-size: 24px;font-family: 'univers_light_condensedRg';}
+	#page_ricercaavanzata {margin-right: 12px;margin-bottom: 40px;padding: 20px;width: 569px;border: 1px solid #7fcff1;border-radius: 10px;-moz-border-radius: 10px; /* firefox */-webkit-border-radius: 10px; /* safari, chrome */float: left;min-height: 457px;height: auto !important;height: 457px;}
+	#page_ricercaavanzata h3 {margin-top: 0;margin-bottom: 20px;padding: 0;color: #009fe3;text-align: left;font-size: 14px;font-weight: normal;}
+	#page_ricercaavanzata p {margin: 0;padding: 0;color: #4c565c;text-align: left;font-size: 14px;font-weight: normal;}
+	#page_ricercaavanzata span {color: #c2c2c2;}
+	#page_ricercaavanzata .title_grigio {margin: 0;padding: 0;color: #4c565c;text-align: left;font-size: 18px;font-family: 'univers_light_condensedRg';text-transform: uppercase;font-weight: bold;}
+	#page_ricercaavanzata .title_azzurro {margin: 0;padding: 0;color: #009fe3;text-align: left;font-size: 18px;font-family: 'univers_light_condensedRg';text-transform: uppercase;font-weight: bold;text-decoration: none;}
+	#page_ricercaavanzata .p_grigio {margin-left: 35px;padding: 0;color: #4c565c;text-align: left;font-size: 12px;}
+	#page_ricercaavanzata .a_azzurro {margin: 0;padding: 0;color: #009fe3;font-size: 12px;text-decoration: underline;font-weight: bold;}
+	#page_ricercaavanzata .p_nav {margin-left: 35px;padding: 0;color: #008887;font-size: 12px;text-decoration: none;font-weight: normal;}
+	#page_ricercaavanzata .a_nav {margin: 0;padding: 0;color: #008887;font-size: 12px;text-decoration: none;font-weight: bold;}
+	#torna_ricerca {margin-top: 5px;padding: 5px 0 0 5px;border: 0;float: right;background: url(../img/bk_torna_ricerca.jpg) no-repeat;width: 158px;height: 24px;cursor: pointer;clear: both;}
+	#torna_ricerca a {margin: 0;padding: 0;border: 0;color: #fff;font-size: 14px;text-decoration: none;}
+			
+/* AERIUS */
+#page_aerius {margin-right: 12px;margin-bottom: 40px;padding: 20px;border-top: 10px solid #0a68a7;background: #dae8f2;width: 569px;min-height: 683px;height: auto !important;height: 683px;float: left;}
+	#page_aerius h2 {margin-top: 20px;margin-bottom: 0;padding: 0;color: #0a68a7;text-align: left;font-size: 21px;font-family: 'univers_light_condensedRg';text-transform: uppercase;}
+	#page_aerius h3 {margin-top: 0;margin-bottom: 20px;padding: 0;color: #0a68a7;text-align: left;font-size: 14px;font-weight: normal;}
+	#page_aerius p {margin: 0;padding: 0;color: #4c565c;text-align: left;font-size: 14px;}
+	#page_aerius a {margin: 0;padding: 0;color: #4c565c;text-decoration: none;}
+	#page_aerius .padding {margin: 0;padding-left: 17px;color: #4c565c;text-align: left;font-size: 12px;}
+	#page_aerius .a_rcp {margin: 0;padding: 0;color: #29abe2;text-align: left;font-size: 12px;text-decoration: underline;}
+	#page_aerius .a_grigio {margin: 0;padding: 0;color: #4c565c;text-align: left;font-size: 18px;font-family: 'univers_light_condensedRg';text-transform: uppercase;font-weight: bold;text-decoration: none;}
+	
+/* NASONEX */
+#page_nasonex {margin-right: 12px;margin-bottom: 40px;padding: 20px;border-top: 10px solid #007c8b;background: #d8ebed;width: 569px;min-height: 683px;height: auto !important;height: 683px;float: left;}
+	#page_nasonex h2 {margin-top: 20px;margin-bottom: 0;padding: 0;color: #007c8b;text-align: left;font-size: 21px;font-family: 'univers_light_condensedRg';text-transform: uppercase;}
+	#page_nasonex h3 {margin-top: 0;margin-bottom: 20px;padding: 0;color: #007c8b;text-align: left;font-size: 14px;font-weight: normal;}
+	#page_nasonex p {margin: 0;padding: 0;color: #4c565c;text-align: left;font-size: 14px;}
+	#page_nasonex a {margin: 0;padding: 0;color: #4c565c;text-decoration: none;}
+	#page_nasonex .padding {margin: 0;padding-left: 17px;color: #4c565c;text-align: left;font-size: 12px;}
+	#page_nasonex .a_rcp {margin: 0;padding: 0;color: #007c8b;text-align: left;font-size: 12px;text-decoration: underline;}
+	#page_nasonex .a_grigio {margin: 0;padding: 0;color: #4c565c;text-align: left;font-size: 18px;font-family: 'univers_light_condensedRg';text-transform: uppercase;font-weight: bold;text-decoration: none;}
+	
+/* SINGULAIR */
+#page_singulair {margin-right: 12px;margin-bottom: 40px;padding: 20px;border-top: 10px solid #007cc3;background: #d5e7f2;width: 569px;min-height: 683px;height: auto !important;height: 683px;float: left;}
+	#page_singulair h2 {margin-top: 20px;margin-bottom: 0;padding: 0;color: #007cc3;text-align: left;font-size: 21px;font-family: 'univers_light_condensedRg';text-transform: uppercase;}
+	#page_singulair h3 {margin-top: 0;margin-bottom: 20px;padding: 0;color: #007cc3;text-align: left;font-size: 14px;font-weight: normal;}
+	#page_singulair p {margin: 0;padding: 0;color: #4c565c;text-align: left;font-size: 14px;}
+	#page_singulair a {margin: 0;padding: 0;color: #4c565c;text-decoration: none;}
+	#page_singulair .padding {margin: 0;padding-left: 17px;color: #4c565c;text-align: left;font-size: 12px;}
+	#page_singulair .a_rcp {margin: 0;padding: 0;color: #00aee7;text-align: left;font-size: 12px;text-decoration: underline;}
+	#page_singulair .a_grigio {margin: 0;padding: 0;color: #4c565c;text-align: left;font-size: 18px;font-family: 'univers_light_condensedRg';text-transform: uppercase;font-weight: bold;text-decoration: none;}
+	
+/* CLINICA CAFE' */
+#page_clinicacafe {margin-right: 12px;margin-bottom: 40px;padding: 20px;border-top: 10px solid #5d2715;background: #ed6f03;width: 569px;float: left;}
+	#page_clinicacafe h2 {margin-top: 20px;margin-bottom: 0;padding: 0;color: #fff;text-align: left;font-size: 21px;font-family: 'univers_light_condensedRg';text-transform: uppercase;}
+	#page_clinicacafe h3 {margin-top: 0;margin-bottom: 20px;padding: 0;color: #5d2715;text-align: left;font-size: 14px;font-weight: normal;}
+	#page_clinicacafe p {margin: 0;padding: 0;color: #5d2715;text-align: left;font-size: 14px;}
+	#page_clinicacafe .pubblicato {margin-bottom: 20px;padding: 0;color: #fff;text-align: left;font-size: 12px;}
+	#page_clinicacafe .visualizzazioni {padding-left:20px;color: #5d2715;}
+	#page_clinicacafe .a_condividi {margin: 0;padding: 0;color: #5d2715;text-align: left;font-size: 18px;font-family: 'univers_light_condensedRg';text-transform: uppercase;font-weight: bold;text-decoration: none;}
+	#condividivideo h2 {margin: 0;padding: 0;color: #ed6f03;text-align: left;font-size: 21px;font-family: 'univers_light_condensedRg';text-transform: uppercase;font-weight: bold;}
+	#condividivideo p {margin: 0;padding: 0;color: #5d2715;text-align: left;font-size: 14px;}
+	form#condividivideo_form {margin: 0;padding: 0;font-size: 14px;color: #5d2715;}
+		form#condividivideo_form input {margin-bottom: 10px;padding: 3px;font-size: 12px;color: #5d2715;height: 19px;width: 250px;border: 1px solid #ed6f03; background-color: transparent;}
+		form#condividivideo_form textarea {margin-bottom: 10px;padding: 3px;font-size: 12px;color: #5d2715;height: 150px;width: 250px;border: 1px solid #ed6f03; background-color: transparent; font-family:Arial, Helvetica, sans-serif;}
+	form#condividivideo_form button{margin-top: 20px;padding: 5px;border: 0;width: 166px;height: 29px;font-size: 16px;color: #fff;text-decoration: none;cursor: pointer;text-align: left;background: url(../img/bk_condividivideo.jpg) no-repeat;}
+	#page_clinicacafe .cerchiamo {margin-left: 35px;padding: 0;color: #5d2715;text-align: left;font-size: 12px;font-weight: normal;}
+	#line {margin: 10px 0 10px 0;padding: 0;border-bottom:1px solid #fff;width: 569px;height: 2px;clear: both;}
+	#smile {margin-top: 15px;padding: 0;border: 0;float: right;}
+	#vota_sketch {margin-top: 5px;padding: 5px 0 0 5px;border: 0;float: right;background: url(../img/bk_vota_sketch.jpg) no-repeat;width: 127px;height: 24px;cursor: pointer;clear: both;}
+	#vota_sketch a {margin: 0;padding: 0;border: 0;color: #fff;font-size: 14px;text-decoration: none;}
+	.video_thumb {margin-right: 10px;padding: 5px;border: 1px solid #a54b0d;border-radius: 3px;-moz-border-radius: 3px; /* firefox */-webkit-border-radius: 3px; /* safari, chrome */}
+	.descrizione {margin: 0;padding: 0;color: #5d2715;text-align: left;font-size: 12px !important;}
+	
+/* LA GRANDE REGATA */
+#page_lagranderegata {margin-right: 12px;margin-bottom: 40px;padding: 20px;border-top: 10px solid #3abfef;background: #004175;width: 569px;float: left;min-height: 683px;height: auto !important;height: 683px;}
+	#page_lagranderegata h3 {margin-top: 0;padding: 0;color: #3abfef;text-align: left;font-size: 12px;font-weight: normal;}
+	#page_lagranderegata .a_azzurro {margin: 0;padding: 0;color: #3abfef;text-align: left;font-size: 14px;font-family: 'univers_light_condensedRg';text-transform: uppercase;font-weight: bold;text-decoration: none;}
+	#page_lagranderegata .a_bianco {margin: 0;padding: 0;color: #fff;text-align: left;font-size: 12px;text-decoration: underline;}
+	#page_lagranderegata h2 {margin-top: 31px;margin-bottom: 0;padding: 0;color: #fff;text-align: left;font-size: 21px;font-family: 'univers_light_condensedRg';text-transform: uppercase;}
+	#page_lagranderegata p {margin: 0;padding: 0;color: #3abfef;text-align: left;font-size: 12px;}
+	#page_lagranderegata span {color: #fff;font-weight: bold;}
+	form#nomebarca {margin-bottom: 20px;padding: 0;width: 500px;}
+			form#nomebarca input {margin-left: 35px;margin-bottom: 20px;padding: 3px;border: 0;font-size: 18px;color: #004175;height: 30px;width: 500px;background: #3abfef;border-radius: 5px;-moz-border-radius: 5px; /* firefox */-webkit-border-radius: 5px; /* safari, chrome */}
+	#box_lagranderegata1_title {margin: 0;padding: 0;width: 500px;position: relative;top: -15px;left: 30px;background:  url(../img/box_lagranderegata_title.png) repeat;z-index: 10;text-align: center;color: #fff;font-size: 18px;font-family: 'univers_light_condensedRg';text-transform: uppercase;}
+	#box_lagranderegata1 {margin: 13px 5px 13px 0;padding: 0;width: 565px;height: 310px;border: 1px solid #0070ac;border-radius: 10px;-moz-border-radius: 10px; /* firefox */-webkit-border-radius: 10px; /* safari, chrome */float: left;}
+	#crea_barca {margin: 0 auto;padding: 5px 0 0 5px;border: 0;background: url(../img/bk_crea_barca.jpg) no-repeat;width: 161px;height: 24px;cursor: pointer;clear: both;}
+	#crea_barca a {margin: 0;padding: 0;border: 0;color: #004175;font-size: 14px;text-decoration: none;font-weight: bold;}
+	#menu_regata {margin-bottom: 20px;padding: 0;width: 570px;height: 38px;background: #3abfef;border-radius: 5px;-moz-border-radius: 5px; /* firefox */-webkit-border-radius: 5px; /* safari, chrome */}
+		#menu_regata ul {margin: 0;padding: 7px 0 0 0;border: 0;list-style-type: none;height: 31px;float: left;}
+		#menu_regata li {margin: 0;padding: 0 10px 0 10px;border-right: 1px solid #004175;float: left;font-size: 20px;font-family: 'univers_light_condensedRg';text-decoration: none;font-weight: bold;color: #004175;cursor: pointer;}
+		#menu_regata li a {margin: 0;padding: 0;border: 0;text-decoration: none;color: #004175;}
+		#menu_regata li a:hover {margin: 0;padding: 0;border: 0;color: #fff;text-decoration: none;}
+		#menu_regata li a.select {margin: 0;padding: 0;border: 0;color: #fff;text-decoration: none;}
+	#banner-fade {margin:0 auto;width: 543px;height: 291px;top: -10px;}
+		#banner-fade ul.bjqs-controls.v-centered li a {display: block;text-decoration: none;background-color: transparent;}
+		#banner-fade ol.bjqs-markers li a {display: none;}
+	#countdown {margin: 0;padding: 0;width: 175px;height: 50px;float: right;border: 1px solid #80a0ba;border-radius: 5px;-moz-border-radius: 5px; /* firefox */-webkit-border-radius: 5px; /* safari, chrome */}
+		#countdown p {margin: 0;padding: 0;color: #3abfef;text-align: center;font-size: 11px;}
+		#countdown h2 {margin: 0 !important;padding: 0;color: #3abfef;text-align: center;font-size: 30px;}
+	#box_lagranderegata3_title {margin: 0;padding: 0;width: 120px;position: relative;top: -10px;left: 18px;background:  url(../img/box_lagranderegata_title.png) repeat;z-index: 10;text-align: center;color: #fff;font-size: 16px;font-family: 'univers_light_condensedRg';text-transform: uppercase;}
+	#box_lagranderegata3 {margin: 13px 5px 0 0;padding: 0;width: 155px;height: 360px;border: 1px solid #0070ac;border-radius: 10px;-moz-border-radius: 10px; /* firefox */-webkit-border-radius: 10px; /* safari, chrome */float: left;}
+	#box_lagranderegata3 table {margin: 0 0 0 5px;font-size: 18px;color: #004175;}
+	#page_lagranderegata h4 {margin-bottom: 0;padding: 0;color: #fff;text-align: left;font-size: 18px;font-family: 'univers_light_condensedRg';text-transform: uppercase;}
+	#page_lagranderegata .p_azzurro {margin: 0;padding: 0;color: #3abfef;font-size: 14px;font-family: 'univers_light_condensedRg';text-transform: uppercase;}
+	#box_lagranderegata2 {margin: 13px 5px 13px 0;padding: 0;width: 565px;border: 1px solid #0070ac;border-radius: 10px;-moz-border-radius: 10px; /* firefox */-webkit-border-radius: 10px; /* safari, chrome */float: left;}
+	#box_lagranderegata2 table {margin-top: 10px;margin-bottom: 10px;}
+	#box_lagranderegata2 td {border-right: 1px solid #004175;border-bottom: 1px solid #3abfef;}
+	#box_lagranderegata2 h3 {margin: 0;padding: 5px;font-size: 16px;color: #004175;font-family: 'univers_light_condensedRg';text-transform: uppercase;font-weight: bold;}
+	#box_lagranderegata2 p {margin: 0;padding: 5px;font-size: 12px;color: #fff;}
+	#box_lagranderegata2 a {color: #fff;text-decoration: none;}
+	form#equipaggioammalato button {margin-top: 20px;margin-left: 10px;padding: 5px;border: 0;width: 166px;height: 29px;font-size: 16px;color: #fff;text-decoration: none;cursor: pointer;text-align: left;background: url(../img/bk_invia_soluzione.jpg) no-repeat;}
+	#box_lagranderegata_img {margin: 0 5px 13px 0;padding: 0;width: 565px;border: 1px solid #0070ac;border-radius: 10px;-moz-border-radius: 10px; /* firefox */-webkit-border-radius: 10px; /* safari, chrome */float: left; background: url(../img/img_equipaggioammalato.jpg) no-repeat;width: 565px;height: 376px;}
+	
+	
+/* LA GRANDE REGATA - MAPPA ITALIA */	
+	#box_lagranderegata4_title {margin: 0;padding: 0;width: 350px;position: relative;top: -10px;left: 25px;background:  url(../img/box_lagranderegata_title.png) repeat;z-index: 10;text-align: center;color: #fff;font-size: 18px;font-family: 'univers_light_condensedRg';text-transform: uppercase;}
+	#box_lagranderegata4 {margin: 13px 5px 0 0;padding: 0;width: 400px;height: 520px;border: 1px solid #0070ac;border-radius: 10px;-moz-border-radius: 10px; /* firefox */-webkit-border-radius: 10px; /* safari, chrome */float: right;background: url(../img/bk_italia.png) no-repeat;}
+	#venezia {margin: 0;padding: 0;width: 50px;height: 17px;position: relative;top: 70px;left: 190px;z-index: 10;cursor: pointer;}
+	#trieste {margin: 0;padding: 0;width: 44px;height: 17px;position: relative;top: 33px;left: 223px;z-index: 11;cursor: pointer;}
+	#portofino {margin: 0;padding: 0;width: 61px;height: 17px;position: relative;top: 80px;left: 15px;z-index: 12;cursor: pointer;}
+	#lavagna {margin: 0;padding: 0;width: 52px;height: 17px;position: relative;top: 63px;left: 78px;z-index: 13;cursor: pointer;}
+	#laspezia {margin: 0;padding: 0;width: 54px;height: 17px;position: relative;top: 65px;left: 40px;z-index: 14;cursor: pointer;}
+	#rimini {margin: 0;padding: 0;width: 38px;height: 17px;position: relative;top: 20px;left: 178px;z-index: 15;cursor: pointer;}
+	#riccione {margin: 0;padding: 0;width: 51px;height: 17px;position: relative;top: 22px;left: 183px;z-index: 16;cursor: pointer;}
+	#pesaro {margin: 0;padding: 0;width: 44px;height: 17px;position: relative;top: 24px;left: 200px;z-index: 17;cursor: pointer;}
+	#livorno {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: 30px;left: 75px;z-index: 18;cursor: pointer;}
+	#piombino {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: 32px;left: 83px;z-index: 19;cursor: pointer;}
+	#pescara {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: 30px;left: 230px;z-index: 20;cursor: pointer;}
+	#campomarino {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: 32px;left: 250px;z-index: 21;cursor: pointer;}
+	#manfredonia {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: 34px;left: 285px;z-index: 22;cursor: pointer;}
+	#ostia {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: 7px;left: 140px;z-index: 23;cursor: pointer;}
+	#anzio {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: 9px;left: 150px;z-index: 24;cursor: pointer;}
+	#portorotondo {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: 11px;left: 70px;z-index: 25;cursor: pointer;}
+	#alghero {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: 5px;left: 10px;z-index: 26;cursor: pointer;}
+	#arbatax {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: 20px;left: 70px;z-index: 27;cursor: pointer;}
+	#ischia {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: -30px;left: 185px;z-index: 28;cursor: pointer;}
+	#capri {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: -28px;left: 195px;z-index: 29;cursor: pointer;}
+	#napoli {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: -70px;left: 230px;z-index: 30;cursor: pointer;}
+	#salerno {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: -68px;left: 240px;z-index: 31;cursor: pointer;}
+	#portocesareo {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: -97px;left: 300px;z-index: 32;cursor: pointer;}
+	#marinadipolicoro {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: -95px;left: 295px;z-index: 33;cursor: pointer;}
+	#crotone {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: -60px;left: 330px;z-index: 34;cursor: pointer;}
+	#tropea {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: -65px;left: 255px;z-index: 35;cursor: pointer;}
+	#palermo {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: -55px;left: 190px;z-index: 36;cursor: pointer;}
+	#trapani {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: -70px;left: 130px;z-index: 37;cursor: pointer;}
+	#lipari {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: -67px;left: 267px;z-index: 38;cursor: pointer;}
+	#catania {margin: 0;padding: 0;width: 88px;height: 17px;position: relative;top: -70px;left: 255px;z-index: 39;cursor: pointer;}
+	
+.rockandroll > b {
+    color: #ED6E03;
+font-size: .8em;
+}
+
+#condividivideo_end h2 {
+    color: #ED6F03;
+    font-family: 'univers_light_condensedRg';
+    font-size: 21px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    text-transform: uppercase;
+}
+#condividivideo_end button {
+    background: url("../img/bk_condividivideo.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    height: 29px;
+    margin-top: 20px;
+    padding: 5px;
+    text-align: left;
+    text-decoration: none;
+    width: 166px;
+}
