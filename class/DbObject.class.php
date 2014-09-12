@@ -18,7 +18,6 @@ Class DbObject{
 		$this->table = DB_PREFIX.$this->table;
 		$this->conn = new Db();
 		$this->data = array();
-		$this->pagesize = DEFAULT_PAGE_SIZE;
 		$this->pages = 0;
 		$this->setDbStructure();
 		$this->setItemDefault();
@@ -175,5 +174,39 @@ Class DbObject{
 	function str($field){
 		return html_entity_decode( $this->getItem($field), ENT_QUOTES, CHARSET);
 	}
+	
+	function sortingNew($filter, $sorting_field="sorting"){
+		$query = "SELECT MAX({$sorting_field})+1 as max_value FROM {$this->table} WHERE 1=1 AND {$filter} ";
+		$this->conn->query($query);
+		$res = $this->conn->fetch();
+		return $res["max_value"];
+	}
+	
+	/*
+	 *  id: entity_id
+	 *  action: 'up' or 'down' //actually up or else
+	 *  filter: eg  language='italian'... used to filter some value of the table
+	 *  sorting_field: the column name
+	 */
+	function sortingMove($position, $action, $filter="true", $sorting_field="sorting")
+	{
+		$sort = ($action=="up")?"DESC":"ASC";
+		$operand = ($action=="up")?"<=":">=";
+		
+		$query = "SELECT * FROM ".$this->table." WHERE {$sorting_field} {$operand} {$position} AND {$filter} ORDER BY {$sorting_field} {$sort} LIMIT 0,2";
+		$this->conn->query($query);
+		while( $row = $this->conn->fetch()){
+			$array[] = $row;
+		}
+
+		if( count($array) == 2 ){
+			$first  = "UPDATE {$this->table} SET {$sorting_field} = ".$array[1][$sorting_field]." WHERE {$this->tableid} = ".$array[0][$this->tableid];
+			$second  = "UPDATE {$this->table} SET {$sorting_field} = ".$array[0][$sorting_field]." WHERE {$this->tableid} = ".$array[1][$this->tableid];
+
+		}
+
+		$this->conn->query($first);
+		$this->conn->query($second);
+	}	
 }
 ?>

@@ -19,7 +19,7 @@ class MySql extends mysqli{
 		$this->username = DB_LOGIN;
 		$this->password = DB_PASSW;
 		$this->database = DB_SCHEMA;
-		$this->page_dimension = 50; //default value	
+		$this->page_dimension = DEFAULT_PAGE_SIZE; //default value	
 			
 		parent::__construct($this->host, $this->username, $this->password, $this->database);
 	}
@@ -49,7 +49,7 @@ class MySql extends mysqli{
 		$this->query($sql);
 		$this->paging_totalrow = $this->rowCount();
 		$this->hasNext = (intval(($this->row_affected-1) / $this->page_dimension)>$pageNumber)?true:false;
-		$this->pages = intval($this->paging_totalrow / $this->page_dimension) + 1;
+		$this->pages = ceil($this->paging_totalrow / $this->page_dimension);
 		$query = str_replace(";", "", $sql);
 		$query = sprintf("%s LIMIT %d,%d;", $sql, $pageNumber*$this->page_dimension, $this->page_dimension);
 		return $this->query($query);

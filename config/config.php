@@ -2,8 +2,7 @@
 define("NOME_SITO","ww-dev");
 define("NOME_SESSIONE","ww-dev");
 define("CHARSET","UTF-8");
-define("DB_PREFIX","");
-define("DEFAULT_PAGE_SIZE","25");
+
 define("USE_COOKIE", true);
 
 //costanti per gli indirizzi email da utilizzare

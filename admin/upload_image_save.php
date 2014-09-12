@@ -2,9 +2,9 @@
 include("initback.php");
 
 
-$link_id = mysql_connect(DB_HOST,DB_LOGIN,DB_PASSW);
+$link_id = mysqli_connect(DB_HOST,DB_LOGIN,DB_PASSW);
 //seleziono il database
-mysql_select_db(DB_SCHEMA) or die ("Non riesco a selezionare il database");
+mysqli_select_db($link_id, DB_SCHEMA) or die ("Non riesco a selezionare il database");
 
 
 if(!isset($_GET["nome_sessione"]))
@@ -74,7 +74,7 @@ $condizione="fk_tabella=".$idTabella." and fk_record=".$chiave_record." and tipo
 $sorting = (restituisci_max_sorting('file', 'sorting', $condizione)+1);
 
 $insert = "insert into file (file, fk_tabella, fk_record, tipoF, sorting) values ('".$nomeFile."',".$idTabella.", ".$chiave_record.", 'img', ".$sorting.")";
-if(!mysql_query($insert))
+if(!mysqli_query($link_id, $insert))
 	exit("Errore query: ".$insert);
 
 ?>
