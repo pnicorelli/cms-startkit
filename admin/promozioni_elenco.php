@@ -15,14 +15,14 @@ if(isset($_GET["del"]) && $_GET["del"] == "si")
 	}
 }
 
-//change sorting
+/*change sorting
 $sorting = $ww->get("sorting", "");
 if( strlen($sorting) >0 )
 {
 	$position = $ww->getInt("position", 0);
 	$object->sortingMove($position, $sorting, "", "sorting");
 }
-
+*/
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
@@ -47,14 +47,14 @@ require_once("header_admin.php");
 
 	<!-- contenuti della pagina -->
 	<div id="content">
-		<span class="titoli"><?php echo ucfirst($suffixpage);?> - Elenco <?php echo strtoupper($sezione);?></span>
+		<span class="titoli"><?php echo ucfirst($suffixpage);?> - Elenco </span>
 		<br />
 		<br />
       	<form name="form" method="post">
 			
 		<?php				 
 						
-			$array = $object->getPage("  ", " ORDER BY sorting ", $page);
+			$array = $object->getPage("  ", " ORDER BY sdate DESC ", $page);
 			$pagine_totali = $object->pages;
 
 			if(empty($array))
@@ -80,8 +80,8 @@ require_once("header_admin.php");
 							
 							print "<tr class='".$sfondo."'><td><input type='checkbox' name='id[]' value='" . $item[$object->tableid] . "'>&nbsp;";
 							print "<a href='".$suffixpage."_item.php?id=".$item[$object->tableid]."'><img src='img/modifica.gif' border=0 title='dettaglio'></a>&nbsp;";
-							print "<a href='".$suffixpage."_elenco.php?position=".$item["sorting"]."&sorting=up'><img src='img/su.gif' border=0 title='su'></a>&nbsp;";
-							print "<a href='".$suffixpage."_elenco.php?position=".$item["sorting"]."&sorting=down'><img src='img/giu.gif' border=0 title='su'></a>";
+							//print "<a href='".$suffixpage."_elenco.php?position=".$item["sorting"]."&sorting=up'><img src='img/su.gif' border=0 title='su'></a>&nbsp;";
+							//print "<a href='".$suffixpage."_elenco.php?position=".$item["sorting"]."&sorting=down'><img src='img/giu.gif' border=0 title='su'></a>";
 							print "</td>";
 							print "<td class='testo'>". html_entity_decode($item["titolo"], ENT_QUOTES, CHARSET) . "</td>";
 

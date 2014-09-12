@@ -188,8 +188,9 @@ Class DbObject{
 	 *  filter: eg  language='italian'... used to filter some value of the table
 	 *  sorting_field: the column name
 	 */
-	function sortingMove($position, $action, $filter="true", $sorting_field="sorting")
+	function sortingMove($position, $action, $filter, $sorting_field="sorting")
 	{
+		$filter = (strlen($filter)==0)?"true":$filter;
 		$sort = ($action=="up")?"DESC":"ASC";
 		$operand = ($action=="up")?"<=":">=";
 		

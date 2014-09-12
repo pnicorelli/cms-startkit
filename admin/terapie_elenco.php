@@ -47,7 +47,7 @@ require_once("header_admin.php");
 
 	<!-- contenuti della pagina -->
 	<div id="content">
-		<span class="titoli"><?php echo ucfirst($suffixpage);?> - Elenco <?php echo strtoupper($sezione);?></span>
+		<span class="titoli"><?php echo ucfirst($suffixpage);?> - Elenco </span>
 		<br />
 		<br />
       	<form name="form" method="post">

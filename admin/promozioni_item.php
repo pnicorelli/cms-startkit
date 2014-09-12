@@ -1,17 +1,21 @@
 <?php
 require_once("initback.php");
 
-$suffixpage = "terapie";
+$suffixpage = "promozioni";
 $id = $ww->getInt("id", 0);
 
 
-$item = new Terapie($id);
+$item = new Promozioni($id);
 
 
 $update = $ww->get("update", "");
 $updated = false;
 if($update == "update"){
 
+
+		$item->item["titolo"] = $ww->get("titolo");
+		$item->item["sdate"] = $ww->dateITAtoTIMESTAMP( $ww->get("sdate", date("d/m/Y")) );
+		$item->item["edate"] = $ww->dateITAtoTIMESTAMP( $ww->get("edate", "31/12/2020") );
 
 		$item->item["titolo"] = $ww->get("titolo");
 		$item->item["descrizione"] = $ww->get("descrizione");
@@ -53,6 +57,9 @@ function controlla_modulo(){
 $(document).ready( function(){
 		$("textarea").ckeditor();
 		$(".updated").show().delay(3000).fadeOut();
+		
+		$.datepicker.setDefaults( $.datepicker.regional[ "it" ] );
+		$( ".date" ).datepicker(  );			
 });
 
 
@@ -93,6 +100,22 @@ $(document).ready( function(){
 					<input type="text" name="titolo" id="titolo" value="<?php echo $item->str("titolo"); ?>">
 				</td>
 			  </tr>
+
+			  <tr>
+				<td>Data Promozione</td>
+				<td>
+					<input type="text" name="sdate" id="sdate" class="date" value="<?php echo $ww->dateITA( $item->str("sdate")); ?>">
+				</td>
+			  </tr>
+
+			  <tr>
+				<td>Data Fine Promozione</td>
+				<td>
+					<input type="text" name="edate" id="edate" class="date" value="<?php echo $ww->dateITA( $item->str("edate")); ?>">
+				</td>
+			  </tr>
+
+
 			  <tr>
 				<td>Specializzazione</td>
 				<td>
@@ -143,7 +166,7 @@ $(document).ready( function(){
 			  
 			  </table>
             </form>
-			<< <a href="<?php echo $suffixpage;?>_elenco.php?">torna all'elenco </a>
+			<< <a href="<?php echo $suffixpage;?>_elenco.php">torna all'elenco </a>
       	    <br />
 	</div>
 	

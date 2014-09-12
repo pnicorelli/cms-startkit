@@ -57,7 +57,7 @@ Class MainController{
 		if(is_array($error)){
 				$error = json_encode($error);
 		}
-		$error = "APP_ERR - ".date("Y-m-d_H:i:s")." - ".$error." ";
+		$error = NOME_SITO." - ".date("Y-m-d_H:i:s")." - ".$error." ";
 		file_put_contents('php://stderr', $error."\n");
 	}
 	
@@ -68,7 +68,17 @@ Class MainController{
 			return "//";
 		} else {
 			$date_obj = new DateTime($date);
-			return $date_obj->format('d-m-Y');
+			return $date_obj->format('d/m/Y');
+		}
+	}
+	
+	function dateITAtoTIMESTAMP($date){
+		if(is_null($date))
+		{
+			return "1970-01-01 00:00:00";
+		} else {
+			$date_obj = DateTime::createFromFormat('d/m/Y', $date);
+			return $date_obj->format('Y-m-d H:i:s');
 		}
 	}
 

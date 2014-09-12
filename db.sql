@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 12, 2014 at 11:07 AM
+-- Generation Time: Sep 12, 2014 at 07:10 PM
 -- Server version: 5.5.38-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.4
 
@@ -34,15 +34,9 @@ CREATE TABLE IF NOT EXISTS `articles` (
   `title` varchar(256) COLLATE utf8_bin NOT NULL,
   `content` text COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=6 ;
 
---
--- Dumping data for table `articles`
---
 
--- --------------------------------------------------------
-
---
 -- Table structure for table `file`
 --
 
@@ -55,18 +49,8 @@ CREATE TABLE IF NOT EXISTS `file` (
   `titoloF` varchar(150) COLLATE utf8_bin NOT NULL DEFAULT '',
   `sorting` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idF`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=34 ;
 
---
--- Dumping data for table `file`
---
-
-
--- --------------------------------------------------------
-
---
--- Table structure for table `gestione_tabelle`
---
 
 CREATE TABLE IF NOT EXISTS `gestione_tabelle` (
   `idGT` int(11) NOT NULL AUTO_INCREMENT,
@@ -84,14 +68,42 @@ CREATE TABLE IF NOT EXISTS `gestione_tabelle` (
   `tipo_ridim` int(11) NOT NULL,
   `cartella_upload` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '',
   PRIMARY KEY (`idGT`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=7 ;
+
+
+
+CREATE TABLE IF NOT EXISTS `promozioni` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `titolo` varchar(256) COLLATE utf8_bin NOT NULL,
+  `descrizione` text COLLATE utf8_bin NOT NULL,
+  `sdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `edate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
+
+
+CREATE TABLE IF NOT EXISTS `staff` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sezione` varchar(64) COLLATE utf8_bin NOT NULL,
+  `nome` varchar(256) COLLATE utf8_bin NOT NULL,
+  `descrizione` varchar(256) COLLATE utf8_bin NOT NULL,
+  `sorting` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=20 ;
+
+
+
+CREATE TABLE IF NOT EXISTS `terapie` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `titolo` varchar(256) COLLATE utf8_bin NOT NULL,
+  `descrizione` text COLLATE utf8_bin NOT NULL,
+  `sorting` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=38 ;
 
 --
--- Dumping data for table `gestione_tabelle`
+-- Dumping data for table `terapie`
 --
-
-INSERT INTO `gestione_tabelle` (`idGT`, `tabella`, `campo`, `tipo`, `etichetta`, `visibile_default`, `n_file`, `width_big`, `height_big`, `width_thumb`, `height_thumb`, `mantieni_orig`, `tipo_ridim`, `cartella_upload`) VALUES
-(1, 'articles', 'example', 'img', 'immagine', '1', 5, 0, 0, 400, 0, 1, 0, 'articoli'),
 
 -- --------------------------------------------------------
 
