@@ -85,7 +85,7 @@ if(!mysql_query($insert))
 	//tblElenco.load(opener.document.location.href+" #tblElenco>*","");
 	
 	var tblElenco = window.opener.jQuery(".<?php print $_SESSION["classTbl"]?>");
-	tblElenco.load(opener.document.location.href+" .<?php print $_SESSION["classTbl"]?>>*","");
+	tblElenco.load(opener.document.location.href+" .<?php print $_SESSION["classTbl"]?>",null);
 	
 	//opener.document.location.reload();
 	window.close();

@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 4.0.10deb1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generato il: Set 11, 2014 alle 12:25
--- Versione del server: 5.5.27-log
--- Versione PHP: 5.4.6
+-- Host: localhost
+-- Generation Time: Sep 12, 2014 at 11:07 AM
+-- Server version: 5.5.38-0ubuntu0.14.04.1
+-- PHP Version: 5.5.9-1ubuntu4.4
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,13 +17,33 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `loveatwell`
+-- Database: `cassiopea`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `file`
+-- Table structure for table `articles`
+--
+
+CREATE TABLE IF NOT EXISTS `articles` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `mdate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `slug` varchar(64) COLLATE utf8_bin NOT NULL,
+  `title` varchar(256) COLLATE utf8_bin NOT NULL,
+  `content` text COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `articles`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `file`
 --
 
 CREATE TABLE IF NOT EXISTS `file` (
@@ -35,12 +55,17 @@ CREATE TABLE IF NOT EXISTS `file` (
   `titoloF` varchar(150) COLLATE utf8_bin NOT NULL DEFAULT '',
   `sorting` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idF`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `file`
+--
+
 
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `gestione_tabelle`
+-- Table structure for table `gestione_tabelle`
 --
 
 CREATE TABLE IF NOT EXISTS `gestione_tabelle` (
@@ -59,9 +84,20 @@ CREATE TABLE IF NOT EXISTS `gestione_tabelle` (
   `tipo_ridim` int(11) NOT NULL,
   `cartella_upload` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '',
   PRIMARY KEY (`idGT`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=4 ;
 
+--
+-- Dumping data for table `gestione_tabelle`
+--
 
+INSERT INTO `gestione_tabelle` (`idGT`, `tabella`, `campo`, `tipo`, `etichetta`, `visibile_default`, `n_file`, `width_big`, `height_big`, `width_thumb`, `height_thumb`, `mantieni_orig`, `tipo_ridim`, `cartella_upload`) VALUES
+(1, 'articles', 'example', 'img', 'immagine', '1', 5, 0, 0, 400, 0, 1, 0, 'articoli'),
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -79,3 +115,6 @@ CREATE TABLE IF NOT EXISTS `users` (
 INSERT INTO `users` (`id`, `nickname`, `username`, `password`, `group`) VALUES
 (1, 'administrator', 'admin', 'de145552133225e8148e3be3b73e2fd2', 'admins');
 
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -5,6 +5,7 @@ date_default_timezone_set("Europe/Rome");
 define("ROOT_APATH", dirname(__FILE__)."/");
 require_once("config/config.php");
 require_once("config/db.php");
+require_once("funzioni/funzioni.php");
 
 if(!isset($_SESSION)){
 	session_start();
