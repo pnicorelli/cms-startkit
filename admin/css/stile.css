@@ -1,0 +1,329 @@
+/* CSS Document */
+
+.select {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+}
+
+#left {
+	float:left;
+	width:450px;
+	min-height:100px;
+	padding-left:30px;
+}
+#right{
+	float:right;
+	width:450px;
+	min-height:100px;
+}
+
+.errore {
+	text-align:center;
+	color:#CC0000;
+	font-weight:bold;
+	font-size:12px;
+
+}
+
+
+/* ==================================  fine classi nuove ===================================*/
+body {
+	background-color:#F0F0F0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+}
+
+div a {
+	color:#333333;
+	text-decoration:underline;
+}
+
+.testo {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+}
+
+.testo_bold {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#1E1E1E;
+	font-weight:bold;
+}
+
+#contenitore_esterno  {
+	background-color:#FFFFFF;
+	width: 820px;
+	padding-top:10px;
+	padding-bottom:10px;
+	margin: 0px auto 0px auto;
+}
+
+#contenitore {
+	background-color:#FFFFFF;
+	width: 800px;
+	margin: 0px auto 0px auto;
+	border: 2px solid #B9BEC1;
+}
+
+
+#head {
+	border-bottom:2px solid #B9BEC1;
+}
+
+
+#content {
+	background-color:#FFFFFF;
+	padding:15px 0px 0px 10px;
+	float:right;
+	width:790px;
+	min-height:400px;
+}
+
+.input {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#333333;
+	width:250px;
+}
+
+.button {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	color:#333333;
+	background-color:#B9BEC1;
+}
+.bottone_formatta{
+	background-color:#999999;
+	color:#FFFFFF;
+	font-size:10px;
+	border:0px;
+	padding:1px 1px;
+	margin:0px;
+	cursor:pointer;
+}
+.bottone_formatta_small{
+	background-color:#999999;
+	color:#FFFFFF;
+	font-size:9px;
+	border:0px;
+	padding:0px;
+	margin:0px;
+	cursor:pointer;
+}
+
+.box {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	color:#333333;
+	background-color:#B9BEC1;
+	width:40px;
+}
+
+.box_glossario {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	color:#333333;
+}
+.titoli {
+	font-size:16px;
+	font-weight:bold;
+}
+
+
+.link {
+	color:#333333;
+	text-decoration:underline;
+}
+
+
+.link_rosso {
+	color:#CC0000;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+
+.testo_piccolo {
+	font-size:10px;
+}
+
+
+#titoletto_login {
+	font-size:16px;
+	font-weight:bold;
+	padding-bottom:25px;
+}
+	
+.colore_testata {
+	background-color:#EEEAEE;
+}	
+
+.colore_uno {
+	background-color:#E1E1E1;
+}	
+	
+.colore_due {
+	background-color:#F0F0F0;
+}
+
+.backscuro {
+	background-color: #DBDBDB;
+}
+
+.backchiaro {
+	background-color: #E9E9E9;
+}
+
+	
+	
+/*STILI DEL MENU*/	
+
+#myMenuID {
+	background-color:#EEEAEE;
+}
+
+
+
+#sotto_menu {
+	margin-top:20px;
+	font-size:16px;
+	font-weight:bold;
+}
+
+
+#sotto_menu a {
+	color:#666666;
+	padding-left:25px;
+	padding-right:25px;
+	text-decoration:none;
+}
+
+#sotto_menu a:hover {
+	text-decoration:underline;
+}
+
+.sfondo_grigio {
+	background-color:#B9B9BC;
+}
+
+
+#logo {
+	padding:3px 3px 3px 3px;
+}
+
+.sfondoSett {
+	text-align:center;
+	background-color:#F7F7F7;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+.div_pop_up {
+	text-align:left;
+	position:absolute;
+	/*top:15px;
+	left:0px;*/
+	z-index:5;
+	background-color:#E8E8E8;
+	border:1px dotted #3E5462;
+	padding:4px 15px 10px 15px;
+	margin:0px;
+	/*visibility:hidden;*/
+	display:none;
+	color:#000000;
+	font-weight:normal;
+	width:200px;
+	-moz-opacity:0.92;			 /* Mozilla 		*/
+	opacity:0.92;				 /*CSS3 Standard	*/
+	filter:alpha(opacity=92);	 /*IE 				*/ 
+}
+
+.loading{
+width:32px;
+height:32px;
+background-image:url(../img/loading.gif);
+background-repeat:no-repeat;
+margin:2px 0px 2px 6px;
+}
+
+.notaPreAjax{
+margin:0px 0px 0px 0px;
+color:#666666;
+font-style:italic;
+}
+
+.cella_titolo{
+font-size:15px;
+font-weight:bold;
+margin:10px 0px 0px 0px;
+}
+
+	.cella_titolo p{
+	font-size:11px !important;
+	font-weight:normal !important;
+	margin:1px 0px 0px 0px;
+	}
+
+
+
+.sottotitolo_box{
+font-family:Arial, Helvetica, sans-serif;
+border:1px solid #7F9DB9;
+font-size:11px;
+width:400px;
+height:80px;
+}
+.testo_box{
+font-family:Arial, Helvetica, sans-serif;
+border:1px solid #7F9DB9;
+font-size:11px;
+width:400px;
+height:150px;
+}
+.testo_box_little{
+font-family:Arial, Helvetica, sans-serif;
+border:1px solid #7F9DB9;
+font-size:11px;
+width:400px;
+height:100px;
+}
+.vedi_ris p{
+	margin:6px 0px 3px 0px;
+	width:100px;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+/************MENU A TAB**************/
+div#navigation{border-bottom: 1px solid #787878; padding: 0px 20px 0px 10px;}
+div#navigation ul{list-style-type: none;margin: 0;padding: 0;white-space: nowrap}
+div#navigation li{display: inline;margin: 0;padding:0}
+div#navigation li a{text-decoration: none;border: 1px solid #787878;padding: 0px 0.3em;
+    background: #ccc;color: #036}
+div#navigation li a:hover{background-color: #f0f0f0}
+div#navigation li#activelink a{border-bottom: 1px solid #fff;background-color: #fff;color: #603; font-weight:bold;}
+
+
+
+#add_detail {
+display:none; 
+z-index:999; 
+border:1px solid #D1D3D4; 
+width:450px; 
+height:350px;  
+position:absolute; 
+left:150px; 
+top:-350px; 
+background-color:#FFFFFF;  
+-moz-box-shadow:  5px  5px 2px #A7A9AC; 
+-webkit-box-shadow:  5px  5px 2px #A7A9AC; 
+filter: progid:DXImageTransform.Microsoft.Shadow(color='#A7A9AC', Direction=135, Strength=5);
+box-shadow: 5px 5px 2px #A7A9AC;
+}
+
